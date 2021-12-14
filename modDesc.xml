@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<modDesc descVersion="61">
+    <author>Bobster82</author>
+	<title>
+		<en>AutoRepair</en>
+    </title>
+	<description>
+		<en>
+		<![CDATA[ AutoRepair keeps your vehicle healty.
+
+		+ Repairs your vehicle automaticly when it has more than 5% damage.
+
+		## How to use:
+		* You only need to place this mod in your fs22 mods folder, no settings needed to set.
+
+		This mod is made by me from scratch.
+
+		If you have any issues with the mod or anything related, please contact me on:
+		https://github.com/Bobster82/FS22_AutoRepair ]]>
+		</en>
+	</description>
+    <version>2.0.0.0</version>
+	<multiplayer supported="true"/>
+	<iconFilename>store.dds</iconFilename>
+	
+    <extraSourceFiles>
+        <sourceFile filename="AutoRepair.lua"/>
+    </extraSourceFiles>	
+
+</modDesc>
