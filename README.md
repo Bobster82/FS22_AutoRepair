@@ -2,9 +2,15 @@
 AutoRepair keeps your vehicle healty.
 
     + Repairs your vehicle automaticly when it has more than 5% damage.
+    + Option to repaint your vehicle when repairing.
+	+ Option to clean your vehicle when repairing.
 
 ### How to use:
-* You only need to place this mod in your fs22 mods folder, no settings needed to set.
+* When you place this mod in your fs22 mods folder, only auto repair is on by default.
+* Press Left Alt + r key to acces the menu.
+    * activate/deactivate the mod
+    * activate/deactivate repaint
+    * activate/deactivate cleaning
 
 <br></br>
 This mod is made by me from scratch.
