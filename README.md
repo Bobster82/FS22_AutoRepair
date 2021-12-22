@@ -32,6 +32,7 @@ If you like my work and would like to support me:</br>
 ### Todo:
     Add multiple language support.
     When not admin, remove help text to open the menu.
+    Activate, deactivate repair/repaint/clean for every farm separately.
 
 ### Changelog:
 
