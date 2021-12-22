@@ -36,12 +36,12 @@ If you like my work and would like to support me:</br>
 ### Changelog:
 
     v2.0.0.4.
-Fixed multiplayer menu not working.
-Fixed multiplayer sync.
-Added option to only repair/repaint/clean.
-Added option to change the time to update.
-Added option to change the damage threshold.
-Added option to change the wear threshold.
-Added option to change the dirt threshold.
+    Fixed multiplayer menu not working.
+    Fixed multiplayer sync.
+    Added option to only repair/repaint/clean.
+    Added option to change the time to update.
+    Added option to change the damage threshold.
+    Added option to change the wear threshold.
+    Added option to change the dirt threshold.
 <br></br>
     
