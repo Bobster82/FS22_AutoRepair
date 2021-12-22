@@ -22,32 +22,72 @@
       <GuiElement type="text" profile="dialogHeaderText"/>
       <GuiElement type="text" profile="dialogHeaderText"/>
 
-      <!-- Mod isActive -->
+      <!-- Time to update -->
+      <GuiElement type="empty" profile="ingameMenuGameSettingsTextInputWrapper">
+        <GuiElement type="textInput" profile="ingameMenuGameSettingsTextInput" id="option0Value" imeKeyboardType="normal" maxCharacters="3" onTextChanged="onTextChangedTime" />
+        <GuiElement type="text"      profile="multiTextOptionSettingsTitle"    id="option0Title"/>
+        <GuiElement type="text"      profile="multiTextOptionSettingsTooltip"  id="option0Tooltip"/>
+      </GuiElement>
+
+      <!-- spacer -->
+      <GuiElement type="text" profile="dialogHeaderText"/>
+
+      <!-- doRepair -->
       <GuiElement type="multiTextOption" profile="multiTextOptionSettings" id="option1Value">
         <GuiElement type="button" profile="multiTextOptionSettingsLeft"/>
         <GuiElement type="button" profile="multiTextOptionSettingsRight"/>
         <GuiElement type="text"   profile="multiTextOptionSettingsText"/>
         <GuiElement type="text"   profile="multiTextOptionSettingsTitle" id="option1Title"/>
         <GuiElement type="bitmap" profile="multiTextOptionSettingsBg"/>
+        <GuiElement type="text"   profile="multiTextOptionSettingsTooltip" id="option1Tooltip"/>
       </GuiElement>
 
-      <!-- Repaint -->
+      <!-- Repair threshold -->
+      <GuiElement type="empty" profile="ingameMenuGameSettingsTextInputWrapper">
+        <GuiElement type="textInput" profile="ingameMenuGameSettingsTextInput" id="option1bValue" imeKeyboardType="normal" maxCharacters="3" onTextChanged="onTextChangedDmg" />
+        <GuiElement type="text"      profile="multiTextOptionSettingsTitle"    id="option1bTitle"/>
+        <GuiElement type="text"      profile="multiTextOptionSettingsTooltip"  id="option1bTooltip"/>
+      </GuiElement>
+
+      <!-- spacer -->
+      <GuiElement type="text" profile="dialogHeaderText"/>
+
+      <!-- doRepaint -->
       <GuiElement type="multiTextOption" profile="multiTextOptionSettings" id="option2Value">
         <GuiElement type="button" profile="multiTextOptionSettingsLeft"/>
         <GuiElement type="button" profile="multiTextOptionSettingsRight"/>
         <GuiElement type="text"   profile="multiTextOptionSettingsText"/>
         <GuiElement type="text"   profile="multiTextOptionSettingsTitle" id="option2Title"/>
         <GuiElement type="bitmap" profile="multiTextOptionSettingsBg"/>
+        <GuiElement type="text"   profile="multiTextOptionSettingsTooltip" id="option2Tooltip"/>
       </GuiElement>
 
-      <!-- Clean -->
+      <!-- Repaint threshold -->
+      <GuiElement type="empty" profile="ingameMenuGameSettingsTextInputWrapper">
+        <GuiElement type="textInput" profile="ingameMenuGameSettingsTextInput" id="option2bValue" imeKeyboardType="normal" maxCharacters="3" onTextChanged="onTextChangedWear" />
+        <GuiElement type="text"      profile="multiTextOptionSettingsTitle"    id="option2bTitle"/>
+        <GuiElement type="text"      profile="multiTextOptionSettingsTooltip"  id="option2bTooltip"/>
+      </GuiElement>
+
+      <!-- spacer -->
+      <GuiElement type="text" profile="dialogHeaderText"/>
+
+      <!-- doWash -->
       <GuiElement type="multiTextOption" profile="multiTextOptionSettings" id="option3Value">
         <GuiElement type="button" profile="multiTextOptionSettingsLeft"/>
         <GuiElement type="button" profile="multiTextOptionSettingsRight"/>
         <GuiElement type="text"   profile="multiTextOptionSettingsText"/>
         <GuiElement type="text"   profile="multiTextOptionSettingsTitle" id="option3Title"/>
         <GuiElement type="bitmap" profile="multiTextOptionSettingsBg"/>
-      </GuiElement> 
+        <GuiElement type="text"   profile="multiTextOptionSettingsTooltip" id="option3Tooltip"/>
+      </GuiElement>
+
+      <!-- Dirt threshold -->
+      <GuiElement type="empty" profile="ingameMenuGameSettingsTextInputWrapper">
+        <GuiElement type="textInput" profile="ingameMenuGameSettingsTextInput" id="option3bValue" imeKeyboardType="normal" maxCharacters="3" onTextChanged="onTextChangedDirt" />
+        <GuiElement type="text"      profile="multiTextOptionSettingsTitle"    id="option3bTitle"/>
+        <GuiElement type="text"      profile="multiTextOptionSettingsTooltip"  id="option3bTooltip"/>
+      </GuiElement>
        
     </GuiElement>
 

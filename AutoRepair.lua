@@ -10,24 +10,27 @@
 local modDir = g_currentModDirectory;
 
 source(Utils.getFilename("Gui/AutoRepairUI.lua", modDir));
+source(Utils.getFilename("Events/ArSyncEvent.lua", modDir));
+source(Utils.getFilename("Events/ArSettingsEvent.lua", modDir));
+
 
 -- Main table
 AutoRepair = {};
 AutoRepair.name = "AutoRepair";
 AutoRepair.guiName = "AutoRepairUI";
-AutoRepair.timeToUpdate = 30000; -- we check every 30000 msec (30 sec) if we need to repair a vehicle and or tool.
+
+-- Settings
+AutoRepair.timeToUpdate = 30000; 	-- we check every 30000 msec (30 sec) (default) if we need to repair/repaint/clean a vehicle and or tool.
+AutoRepair.dmgThreshold = 5; 		-- 5% damage (default)
+AutoRepair.wearThreshold = 5; 		-- 5% damage to paint (default)
+AutoRepair.dirtThreshold = 5;	 	-- 5% dirty (default)
+AutoRepair.doRepair = true;
+AutoRepair.doRepaint = false;
+AutoRepair.doWash = false;
+
 AutoRepair.timer = 0;
-AutoRepair.dmgThreshold = 0.05; -- 5% damage
-
-AutoRepair.isActive = true;
-AutoRepair.repaintWhenRepair = false;
-AutoRepair.cleanWhenRepair = false;
-
 AutoRepair.firstRun = true;
-AutoRepair.mp = {}; -- MultiPlayer game
-AutoRepair.mp.isActive = false;
-AutoRepair.mp.isServer = false;
-AutoRepair.mp.isAdmin = false;
+AutoRepair.isServer = false;
 
 
 addModEventListener(AutoRepair);
@@ -55,45 +58,47 @@ end;
 -- FS update
 function AutoRepair:update(dt)
 
-	if (AutoRepair.firstRun)then
-		if (g_currentMission.missionDynamicInfo and g_currentMission.missionDynamicInfo.isMultiplayer) then
-			-- Multiplayer game...
-			AutoRepair.mp.isActive = true;
-			if (not g_currentMission.missionDynamicInfo.isClient) then
-				-- Only the server needs to repair/repaint/clean
-				AutoRepair.mp.isServer = true;
-			end;
-			if (g_currentMission.isMasterUser) then
-				-- Admin rights to open the menu in MP game
-				AutoRepair.mp.isAdmin = true;
-			end;
+	if (self.firstRun) then
+		self.isServer = g_currentMission:getIsServer();
+		if (not self.isServer) then
+			ArSyncEvent.sendEvent(); -- Sync with server
 		end;
-		AutoRepair.firstRun = false;
+		self.firstRun = false;
 	end;
 
-	if (not AutoRepair.isActive) then return; end;
-	-- Only the server needs to run the update script in MultiPlayer
-	if (AutoRepair.mp.isActive and not AutoRepair.mp.isServer) then return; end;
+	-- If not server and active, no need to go further
+	if (not self.isServer) then return; end;
+	if (self.doRepair) then
+	elseif (self.doRepaint) then
+	elseif (self.doWash) then
+	else return;
+	end;
 
 	if (self.timer > self.timeToUpdate) then
 		for _, vehicle in ipairs(g_currentMission.vehicles) do
 			-- We repair all vehicles owned by any farm
 			if (vehicle.ownerFarmId ~= 0) then
-				if (vehicle.getDamageAmount) then
-					if (vehicle:getDamageAmount() > AutoRepair.dmgThreshold) then
-						vehicle:repairVehicle();
-						-- Option set to repaint also when we repair, then repaint the vehicle
-						if (AutoRepair.repaintWhenRepair and vehicle.repaintVehicle) then
-							vehicle:repaintVehicle();
-						end;
-						-- Option set to clean als when we repair, then clean the vehicle
-						if (AutoRepair.cleanWhenRepair and vehicle.spec_washable) then
-							for _, node in pairs(vehicle.spec_washable.washableNodes) do
-								vehicle:setNodeDirtAmount(node, 0);
-							end;
+				-- Repair
+				if (self.doRepair and vehicle.getDamageAmount) then
+					if (vehicle:getDamageAmount() > self.dmgThreshold /100) then
+						if (vehicle.repairVehicle) then vehicle:repairVehicle(); end;
+					end;
+				end;
+				-- Repaint
+				if (self.doRepaint and vehicle.getWearTotalAmount) then
+					if (vehicle:getWearTotalAmount() > self.wearThreshold /100) then
+						if (vehicle.repaintVehicle) then vehicle:repaintVehicle(); end;
+					end;
+				end;
+				-- Wash
+				if (self.doWash and vehicle.getDirtAmount) then
+					if (vehicle:getDirtAmount() > self.dirtThreshold /100) then
+						for _, node in pairs(vehicle.spec_washable.washableNodes) do
+							vehicle:setNodeDirtAmount(node, 0);
 						end;
 					end;
 				end;
+				--
 			end;
 		end;
 		self.timer = 0;
@@ -114,7 +119,7 @@ end;
 
 function AutoRepair:openSettingsMenu()
 	-- Only admin in MP can change settings
-	if (AutoRepair.mp.isActive and not AutoRepair.mp.isAdmin) then return; end;
+	if (not g_currentMission.isMasterUser) then return; end;
 
     if not g_gui:getIsGuiVisible() then
         g_gui:showDialog(AutoRepair.guiName);
@@ -135,15 +140,11 @@ end;
 
 
 
-
-
-
 -- ### SAVE
 
 
 function AutoRepair.saveSavegame()
 	-- Only the server needs to save in MP game
-	if (AutoRepair.mp.isActive and not AutoRepair.mp.isServer) then return; end;
 
 	if (g_server ~= nil) then
 		local xmlFilePath = AutoRepair.getXMLPath();
@@ -152,11 +153,17 @@ function AutoRepair.saveSavegame()
 		setXMLString(xmlFile, "AutoRepair.author", AutoRepair.author);
 		setXMLString(xmlFile, "AutoRepair.version", AutoRepair.version);
 
-		setXMLBool(xmlFile, "AutoRepair.isActive", AutoRepair.isActive);
-		setXMLBool(xmlFile, "AutoRepair.repaintWhenRepair", AutoRepair.repaintWhenRepair);
-		setXMLBool(xmlFile, "AutoRepair.cleanWhenRepair", AutoRepair.cleanWhenRepair);
+		setXMLBool(xmlFile, "AutoRepair.doRepair", AutoRepair.doRepair);
+		setXMLBool(xmlFile, "AutoRepair.doRepaint", AutoRepair.doRepaint);
+		setXMLBool(xmlFile, "AutoRepair.doWash", AutoRepair.doWash);
+
+		setXMLInt(xmlFile, "AutoRepair.timeToUpdate", AutoRepair.timeToUpdate);
+		setXMLInt(xmlFile, "AutoRepair.dmgThreshold", AutoRepair.dmgThreshold);
+		setXMLInt(xmlFile, "AutoRepair.wearThreshold", AutoRepair.wearThreshold);
+		setXMLInt(xmlFile, "AutoRepair.dirtThreshold", AutoRepair.dirtThreshold);
 
 		saveXMLFile(xmlFile);
+		print ("[AR] saved to xml file");
 	end;
 end;
 
@@ -174,9 +181,16 @@ end;
 function AutoRepair.readFromXML(xmlFile)
 	if (xmlFile == nil) then return; end;
 
-	AutoRepair.isActive = 			Utils.getNoNil(getXMLBool(xmlFile, "AutoRepair.isActive"), AutoRepair.isActive);
-	AutoRepair.repaintWhenRepair = 	Utils.getNoNil(getXMLBool(xmlFile, "AutoRepair.repaintWhenRepair"), AutoRepair.repaintWhenRepair);
-	AutoRepair.cleanWhenRepair = 	Utils.getNoNil(getXMLBool(xmlFile, "AutoRepair.cleanWhenRepair"), AutoRepair.cleanWhenRepair);
+	AutoRepair.doRepair = 		Utils.getNoNil(getXMLBool(xmlFile, "AutoRepair.doRepair"), AutoRepair.doRepair);
+	AutoRepair.doRepaint = 		Utils.getNoNil(getXMLBool(xmlFile, "AutoRepair.doRepaint"), AutoRepair.doRepaint);
+	AutoRepair.doWash = 		Utils.getNoNil(getXMLBool(xmlFile, "AutoRepair.doWash"), AutoRepair.doWash);
+
+	AutoRepair.timeToUpdate = 	Utils.getNoNil(getXMLInt(xmlFile, "AutoRepair.timeToUpdate"), AutoRepair.timeToUpdate);
+	AutoRepair.dmgThreshold = 	Utils.getNoNil(getXMLInt(xmlFile, "AutoRepair.dmgThreshold"), AutoRepair.dmgThreshold);
+	AutoRepair.wearThreshold = 	Utils.getNoNil(getXMLInt(xmlFile, "AutoRepair.wearThreshold"), AutoRepair.wearThreshold);
+	AutoRepair.dirtThreshold = 	Utils.getNoNil(getXMLInt(xmlFile, "AutoRepair.dirtThreshold"), AutoRepair.dirtThreshold);
+
+	print ("[AR] loaded from xml file");
 end;
 
 -- Returns the xml file path stored in savegame directory. Creates new if not exists
