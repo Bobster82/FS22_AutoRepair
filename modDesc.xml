@@ -3,6 +3,7 @@
     <author>Bobster82</author>
 	<title>
 		<en>AutoRepair</en>
+		<it>Auto Riparazione</it>
     </title>
 	<description>
 		<en>
@@ -28,6 +29,29 @@
 		If you have any issues with the mod or anything related, please contact me on:
 		https://github.com/Bobster82/FS22_AutoRepair ]]>
 		</en>
+		<it>
+		<![CDATA[Auto Riparazione mantiene il tuo veicolo sano.
+
+		+ Ripara automaticamente il tuo veicolo in caso di danni.
+		+ Rivernicia automaticamente il tuo veicolo quando è usurato.
+		+ Pulisci automaticamente il tuo veicolo quando si sporca.
+
+		## Come usare:
+		* Quando inserisci questa mod nella cartella mod fs22, solo la riparazione automatica è attiva per impostazione predefinita.
+		* Premi il tasto Alt sinistro + R per accedere al menù.
+		* Modificare l'intervallo di tempo in cui è necessario controllare veicoli/strumenti.
+		* Attiva/disattiva la riparazione automatica.
+		* Cambia la percentuale di danno che un veicolo/strumento viene riparato.
+		* Attiva/disattiva la riverniciatura automatica.
+		* Cambia la percentuale di usura che un veicolo/attrezzo viene riverniciato.
+		* Attiva/disattiva la pulizia automatica.
+		* Cambia la percentuale di sporco che un veicolo viene pulito.
+
+		Questa mod è stata creata da me da zero.
+
+		Se hai problemi con la mod o qualcosa di correlato, contattami su:
+		https://github.com/Bobster82/FS22_AutoRepair ]]>
+		</it>
 	</description>
     <version>2.0.0.4</version>
 	<multiplayer supported="true"/>
@@ -46,6 +70,7 @@
   	<l10n>
 		<text name="input_AR_openMenu">
 			<en>AutoRepair: Open the settings menu</en>
+			<it>Auto Riparazione: Apri il menù delle impostazioni</it>
 		</text>
   	</l10n>
 	
