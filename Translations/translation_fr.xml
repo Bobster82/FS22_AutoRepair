@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<l10n>
+	<!--
+		Translation by:
+		DeepL Translator
+		Bobster82 
+	-->
+	<texts>
+		<text name="input_AR_openMenu"					text="AutoRepair: Ouvrir le menu des paramètres" />
+		<text name="AR_gui_yes"							text="Oui" />
+		<text name="AR_gui_no"							text="Non" />
+
+		<text name="AR_gui_useGlobal_title"				text="Utilisation globale ou par ferme" />
+		<text name="AR_gui_useGlobal_global"			text="Global" />
+		<text name="AR_gui_useGlobal_farm"				text="Par ferme" />
+		<text name="AR_gui_useGlobal_tooltip"			text="Utiliser des paramètres globaux pour toutes les fermes ou définir par ferme" />
+
+		<text name="AR_gui_timeToUpdate"				text="Temps de mise à jour en secondes" />
+		<text name="AR_gui_timeToUpdate_tooltip"		text="Modifier l'intervalle de temps où les véhicules/outils doivent être contrôlés (1-60)." />
+
+		<text name="AR_gui_useByFarm_title"				text="Numéro de ferme" />
+		<text name="AR_gui_useByFarm_tooltip"			text="Sélectionnez le numéro de la ferme.." />
+
+		<text name="AR_gui_autorepair_title"			text="Réparation automatique" />
+		<text name="AR_gui_autorepair_tooltip"			text="Activation/désactivation de la réparation automatique." />
+		<text name="AR_gui_dmg_title"					text="Limite des dommages (1-99)" />
+		<text name="AR_gui_dmg_tooltip"					text="Modification de la limite de dommages lorsqu'un véhicule/outil est réparé." />
+
+		<text name="AR_gui_autorepaint_title"			text="Repeindre automatiquement" />
+		<text name="AR_gui_autorepaint_tooltip"			text="Activation/désactivation du repeint automatique." />
+		<text name="AR_gui_wear_title"					text="Limite d'usure (1-99)" />
+		<text name="AR_gui_wear_tooltip"				text="Modifier la limite d'usure lorsqu'un véhicule/outil est repeint." />
+
+		<text name="AR_gui_autoclean_title"				text="Lavage automatique" />
+		<text name="AR_gui_autoclean_tooltip"			text="Activation/désactivation du lavage automatique." />
+		<text name="AR_gui_dirt_title"					text="Limite de la saleté (1-99)" />
+		<text name="AR_gui_dirt_tooltip"				text="Modifier la limite de saleté lors du lavage d'un véhicule/outil." />
+		
+		
+		<text name="AR_warning_noAdmin"					text="Vous devez vous connecter en tant qu'administrateur pour utiliser le menu." />
+		
+	</texts>
+</l10n>

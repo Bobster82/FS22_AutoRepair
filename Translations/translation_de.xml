@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<l10n>
+	<!--
+		Translation by: 
+		DeepL Translator
+		Bobster82 
+	-->
+	<texts>
+		<text name="input_AR_openMenu"					text="AutoRepair: Menü Einstellungen öffnen" />
+		<text name="AR_gui_yes"							text="Ja" />
+		<text name="AR_gui_no"							text="Nein" />
+
+		<text name="AR_gui_useGlobal_title"				text="Global oder pro Betrieb verwenden" />
+		<text name="AR_gui_useGlobal_global"			text="Global" />
+		<text name="AR_gui_useGlobal_farm"				text="Pro Betrieb" />
+		<text name="AR_gui_useGlobal_tooltip"			text="Globale Einstellungen für alle Farmen verwenden oder pro Farm einstellen" />
+
+		<text name="AR_gui_timeToUpdate"				text="Aktualisierungszeit in Sekunden" />
+		<text name="AR_gui_timeToUpdate_tooltip"		text="Ändern Sie das Zeitintervall, in dem die Fahrzeuge/Werkzeuge überprüft werden sollen (1-60)." />
+
+		<text name="AR_gui_useByFarm_title"				text="Nummer des Betriebs" />
+		<text name="AR_gui_useByFarm_tooltip"			text="Wählen Sie die Nummer des Betriebs." />
+
+		<text name="AR_gui_autorepair_title"			text="Automatische Reparatur" />
+		<text name="AR_gui_autorepair_tooltip"			text="Aktivieren/Deaktivieren der automatischen Reparatur." />
+		<text name="AR_gui_dmg_title"					text="Schadensgrenze (1-99)" />
+		<text name="AR_gui_dmg_tooltip"					text="Änderung der Schadensgrenze bei der Reparatur eines Fahrzeugs/Werkzeugs." />
+
+		<text name="AR_gui_autorepaint_title"			text="Automatische Übermalung" />
+		<text name="AR_gui_autorepaint_tooltip"			text="Aktivieren/Deaktivieren der automatischen Übermalung." />
+		<text name="AR_gui_wear_title"					text="Abnutzungsgrenze (1-99)" />
+		<text name="AR_gui_wear_tooltip"				text="Ändern Sie die Verschleißgrenze, wenn ein Fahrzeug/Werkzeug neu lackiert wird." />
+
+		<text name="AR_gui_autoclean_title"				text="Automatisches Waschen" />
+		<text name="AR_gui_autoclean_tooltip"			text="Aktivieren/Deaktivieren der automatischen Wäsche." />
+		<text name="AR_gui_dirt_title"					text="Schmutzige Grenze (1-99)" />
+		<text name="AR_gui_dirt_tooltip"				text="Änderung der Verschmutzungsgrenze beim Waschen eines Fahrzeugs/Werkzeugs." />
+		
+		
+		<text name="AR_warning_noAdmin"					text="Sie müssen sich als Administrator anmelden, um das Menü nutzen zu können" />
+		
+	</texts>
+</l10n>

@@ -16,24 +16,35 @@
 
     <GuiElement type="scrollingLayout" profile="ingameMenuSettingsLayout">
 
-      <!-- Header -->
-      <GuiElement type="text" profile="dialogHeaderText"/>
-      <GuiElement type="text" profile="dialogHeaderText" id="guiHeader"/>
-      <GuiElement type="text" profile="dialogHeaderText"/>
-      <GuiElement type="text" profile="dialogHeaderText"/>
+      <!-- useGlobal -->
+      <GuiElement type="multiTextOption" profile="multiTextOptionSettings" id="useGlobalValue" margin="0px 10px 0px 0px" onClick="onUseGlobalValueChanged">
+        <GuiElement type="button" profile="multiTextOptionSettingsLeft"/>
+        <GuiElement type="button" profile="multiTextOptionSettingsRight"/>
+        <GuiElement type="text"   profile="multiTextOptionSettingsText"/>
+        <GuiElement type="text"   profile="multiTextOptionSettingsTitle" id="useGlobalTitle"/>
+        <GuiElement type="bitmap" profile="multiTextOptionSettingsBg"/>
+        <GuiElement type="text"   profile="multiTextOptionSettingsTooltip" id="useGlobalTooltip"/>
+      </GuiElement>
+
+      <!-- useByFarmValue -->
+      <GuiElement type="multiTextOption" profile="multiTextOptionSettings" id="useByFarmValue" margin="0px 10px 0px 0px" onClick="onUseByFarmValueChanged">
+        <GuiElement type="button" profile="multiTextOptionSettingsLeft"/>
+        <GuiElement type="button" profile="multiTextOptionSettingsRight"/>
+        <GuiElement type="text"   profile="multiTextOptionSettingsText"/>
+        <GuiElement type="text"   profile="multiTextOptionSettingsTitle" id="useByFarmTitle"/>
+        <GuiElement type="bitmap" profile="multiTextOptionSettingsBg"/>
+        <GuiElement type="text"   profile="multiTextOptionSettingsTooltip" id="useByFarmTooltip"/>
+      </GuiElement>
 
       <!-- Time to update -->
-      <GuiElement type="empty" profile="ingameMenuGameSettingsTextInputWrapper">
+      <GuiElement type="empty" profile="ingameMenuGameSettingsTextInputWrapper" margin="0px 30px 0px 0px">
         <GuiElement type="textInput" profile="ingameMenuGameSettingsTextInput" id="option0Value" imeKeyboardType="normal" maxCharacters="3" onTextChanged="onTextChangedTime" />
         <GuiElement type="text"      profile="multiTextOptionSettingsTitle"    id="option0Title"/>
         <GuiElement type="text"      profile="multiTextOptionSettingsTooltip"  id="option0Tooltip"/>
       </GuiElement>
 
-      <!-- spacer -->
-      <GuiElement type="text" profile="dialogHeaderText"/>
-
       <!-- doRepair -->
-      <GuiElement type="multiTextOption" profile="multiTextOptionSettings" id="option1Value">
+      <GuiElement type="multiTextOption" profile="multiTextOptionSettings" id="option1Value" margin="0px 30px 0px 0px" onClick="onValueChangedDmg">
         <GuiElement type="button" profile="multiTextOptionSettingsLeft"/>
         <GuiElement type="button" profile="multiTextOptionSettingsRight"/>
         <GuiElement type="text"   profile="multiTextOptionSettingsText"/>
@@ -43,17 +54,14 @@
       </GuiElement>
 
       <!-- Repair threshold -->
-      <GuiElement type="empty" profile="ingameMenuGameSettingsTextInputWrapper">
+      <GuiElement type="empty" profile="ingameMenuGameSettingsTextInputWrapper" margin="0px 10px 0px 0px">
         <GuiElement type="textInput" profile="ingameMenuGameSettingsTextInput" id="option1bValue" imeKeyboardType="normal" maxCharacters="3" onTextChanged="onTextChangedDmg" />
         <GuiElement type="text"      profile="multiTextOptionSettingsTitle"    id="option1bTitle"/>
         <GuiElement type="text"      profile="multiTextOptionSettingsTooltip"  id="option1bTooltip"/>
       </GuiElement>
 
-      <!-- spacer -->
-      <GuiElement type="text" profile="dialogHeaderText"/>
-
       <!-- doRepaint -->
-      <GuiElement type="multiTextOption" profile="multiTextOptionSettings" id="option2Value">
+      <GuiElement type="multiTextOption" profile="multiTextOptionSettings" id="option2Value" margin="0px 30px 0px 0px" onClick="onValueChangedWear">
         <GuiElement type="button" profile="multiTextOptionSettingsLeft"/>
         <GuiElement type="button" profile="multiTextOptionSettingsRight"/>
         <GuiElement type="text"   profile="multiTextOptionSettingsText"/>
@@ -63,17 +71,14 @@
       </GuiElement>
 
       <!-- Repaint threshold -->
-      <GuiElement type="empty" profile="ingameMenuGameSettingsTextInputWrapper">
+      <GuiElement type="empty" profile="ingameMenuGameSettingsTextInputWrapper" margin="0px 10px 0px 0px">
         <GuiElement type="textInput" profile="ingameMenuGameSettingsTextInput" id="option2bValue" imeKeyboardType="normal" maxCharacters="3" onTextChanged="onTextChangedWear" />
         <GuiElement type="text"      profile="multiTextOptionSettingsTitle"    id="option2bTitle"/>
         <GuiElement type="text"      profile="multiTextOptionSettingsTooltip"  id="option2bTooltip"/>
       </GuiElement>
 
-      <!-- spacer -->
-      <GuiElement type="text" profile="dialogHeaderText"/>
-
       <!-- doWash -->
-      <GuiElement type="multiTextOption" profile="multiTextOptionSettings" id="option3Value">
+      <GuiElement type="multiTextOption" profile="multiTextOptionSettings" id="option3Value" margin="0px 30px 0px 0px" onClick="onValueChangedDirt">
         <GuiElement type="button" profile="multiTextOptionSettingsLeft"/>
         <GuiElement type="button" profile="multiTextOptionSettingsRight"/>
         <GuiElement type="text"   profile="multiTextOptionSettingsText"/>
@@ -83,7 +88,7 @@
       </GuiElement>
 
       <!-- Dirt threshold -->
-      <GuiElement type="empty" profile="ingameMenuGameSettingsTextInputWrapper">
+      <GuiElement type="empty" profile="ingameMenuGameSettingsTextInputWrapper" margin="0px 10px 0px 10px">
         <GuiElement type="textInput" profile="ingameMenuGameSettingsTextInput" id="option3bValue" imeKeyboardType="normal" maxCharacters="3" onTextChanged="onTextChangedDirt" />
         <GuiElement type="text"      profile="multiTextOptionSettingsTitle"    id="option3bTitle"/>
         <GuiElement type="text"      profile="multiTextOptionSettingsTooltip"  id="option3bTooltip"/>
@@ -94,7 +99,6 @@
     <!-- Footer -->
     <GuiElement type="flowLayout" profile="buttonBoxDialog" size="1400px 50px">
       <GuiElement type="button" profile="buttonOK" id="okButton" text="$l10n_button_ok" onClick="onClickOk"/>
-      <GuiElement type="button" profile="buttonBack" id="backButton" text="$l10n_button_back" onClick="onClickBack"/>
     </GuiElement>
     
   </GuiElement>

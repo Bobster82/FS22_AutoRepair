@@ -23,7 +23,9 @@ end;
 function ArSyncEvent:run(connection)
     if g_server ~= nil then
         -- If server get sync event, server sends event with settings
-        ArSettingsEvent.sendEvent(  AutoRepair.timeToUpdate,
+        ArSettingsEvent.sendEvent(  0,
+                                    AutoRepair.timeToUpdate,
+                                    AutoRepair.mp.useGlobal,
                                     AutoRepair.doRepair,
                                     AutoRepair.doRepaint,
                                     AutoRepair.doWash,
@@ -31,6 +33,18 @@ function ArSyncEvent:run(connection)
                                     AutoRepair.wearThreshold,
                                     AutoRepair.dirtThreshold
         );
+        for farmId, _ in ipairs(AutoRepair.mp.farms) do
+			ArSettingsEvent.sendEvent(  farmId,
+										AutoRepair.timeToUpdate,
+                                        AutoRepair.mp.useGlobal,
+										AutoRepair.mp.farms[farmId].doRepair,
+										AutoRepair.mp.farms[farmId].doRepaint,
+										AutoRepair.mp.farms[farmId].doWash,
+										AutoRepair.mp.farms[farmId].dmgThreshold,
+										AutoRepair.mp.farms[farmId].wearThreshold,
+										AutoRepair.mp.farms[farmId].dirtThreshold
+		);
+		end;
     end;
 end;
 

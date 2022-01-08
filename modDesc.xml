@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="no" ?>
 <modDesc descVersion="63">
-    <author>Bobster82</author>
+	<author>Bobster82</author>
 	<title>
 		<en>AutoRepair</en>
-    </title>
+		<de>AutoRepair</de>
+		<fr>AutoRepair</fr>
+		<nl>AutoRepair</nl>
+	</title>
 	<description>
 		<en>
 		<![CDATA[ AutoRepair keeps your vehicle healty.
@@ -16,25 +19,114 @@
 		* When you place this mod in your fs22 mods folder, only auto repair is on by default.
 		* Press Left Alt + r key to acces the menu.
 				* Change the time interval when vehicles/tools needs to be checked.
-			    * Activate/deactivate auto repair.
+				* Activate/deactivate auto repair.
 				* Change at what damage percent a vehicle/tool get repaired.
 				* Activate/deactivate auto repaint.
 				* Change at what wear percent a vehicle/tool get repainted.
 				* Activate/deactivate auto clean.
 				* Change at what dirt percent a vehicle get cleaned.
 
+		## Multiplayer:
+		* You need admin rights to acces the settings menu
+		* You can use global settings for all farms or change by farm
+
 		This mod is made by me from scratch.
 
 		If you have any issues with the mod or anything related, please contact me on:
 		https://github.com/Bobster82/FS22_AutoRepair ]]>
 		</en>
+
+		<de>
+		<![CDATA[ AutoRepair hält Ihr Fahrzeug gesund.
+
+		+ Repariert Ihr Fahrzeug automatisch, wenn es beschädigt ist.
+		+ Lackiert Ihr Fahrzeug automatisch neu, wenn es abgenutzt ist.
+		+ Reinigt Ihr Fahrzeug automatisch, wenn es schmutzig geworden ist.
+
+		## Wie zu verwenden:
+		* Wenn Sie diese Mod in Ihrem fs22 Mods-Ordner platzieren, ist nur die automatische Reparatur standardmäßig aktiviert.
+		* Drücken Sie die linke Alt + r Taste, um das Menü aufzurufen.
+				* Ändern Sie das Zeitintervall, in dem Fahrzeuge/Werkzeuge überprüft werden müssen.
+				* Aktivieren/Deaktivieren der Autoreparatur.
+				* Ändern Sie den Prozentsatz des Schadens, den ein Fahrzeug/Werkzeug repariert wird.
+				* Aktivieren/Deaktivieren der automatischen Neulackierung.
+				* Ändert, ab welchem Verschleißprozentsatz ein Fahrzeug/Werkzeug neu lackiert wird.
+				* Aktivieren/Deaktivieren der automatischen Reinigung.
+				* Ändert, ab welchem Verschmutzungsgrad ein Fahrzeug gereinigt wird.
+
+		## Multiplayer:
+		* Sie benötigen Admin-Rechte, um auf das Einstellungsmenü zuzugreifen.
+		* Du kannst globale Einstellungen für alle Farmen verwenden oder sie pro Farm ändern.
+
+		Diese Mod wurde von mir von Grund auf neu erstellt.
+
+		Wenn Sie irgendwelche Probleme mit der Mod oder irgendetwas damit zu tun haben, kontaktieren Sie mich bitte auf:
+		https://github.com/Bobster82/FS22_AutoRepair ]]>
+		</de>
+
+		<fr>
+		<![CDATA[ AutoRepair maintient votre véhicule en bonne santé.
+
+		+ Répare automatiquement votre véhicule lorsqu'il est endommagé.
+		+ Repeint automatiquement votre véhicule lorsqu'il est usé.
+		+ Nettoie automatiquement votre véhicule lorsqu'il est sale.
+
+		## Comment utiliser :
+		* Lorsque vous placez ce mod dans votre dossier mods fs22, seule la réparation automatique est activée par défaut.
+		* Appuyez sur la touche Alt gauche + r pour accéder au menu.
+				* Changez l'intervalle de temps où les véhicules/outils doivent être vérifiés.
+				* Activer/désactiver la réparation automatique.
+				* Modifiez le pourcentage de dommages d'un véhicule/outil qui doit être réparé.
+				* Activer/désactiver la peinture automatique.
+				* Modification du pourcentage d'usure d'un véhicule/outil qui sera repeint.
+				* Activez/désactivez le nettoyage automatique.
+				* Modifie le pourcentage de saleté du véhicule qui sera nettoyé.
+
+		## Multijoueur :
+		* Vous devez avoir les droits d'administrateur pour accéder au menu des paramètres.
+		* Vous pouvez utiliser les paramètres globaux pour toutes les fermes ou changer par ferme.
+
+		Ce mod est fait par moi à partir de zéro.
+
+		Si vous avez des problèmes avec le mod ou quoi que ce soit d'autre, s'il vous plaît contactez-moi sur :
+		https://github.com/Bobster82/FS22_AutoRepair ]]>
+		</fr>
+
+		<nl>
+		<![CDATA[ AutoRepair houdt uw voertuig in goede staat.
+
+		+ Repareert uw voertuig automatisch wanneer het schade heeft.
+		+ Overspuit uw voertuig automatisch wanneer het versleten is.
+		+ Was uw voertuig automatisch wanneer het vuil is geworden.
+
+		## Hoe te gebruiken:
+		* Wanneer je deze mod in je fs22 mod map plaatst, staat standaard alleen automatisch repareren aan.
+		* Druk op de linker Alt + r toets om het menu te openen.
+				* Verander het tijdsinterval wanneer voertuigen/tools gecontroleerd moeten worden.
+				* Activeer/deactiveer automatisch repareren.
+				* Wijzig bij welk schade percentage een voertuig/gereedschap wordt gerepareerd.
+				* Activeer/deactiveer automatisch overspuiten.
+				* Wijzig bij welk slijtagepercentage een voertuig/gereedschap overgespoten wordt.
+				* Activeer/deactiveer automatisch wassen.
+				* Wijzig bij welk percentage vuil een voertuig gewassen wordt.
+
+		## Multiplayer:
+		* Je hebt admin rechten nodig om het menu te openen
+		* Je kunt globale instellingen gebruiken voor alle boerderijen of per boerderij veranderen.
+
+		Deze mod is gemaakt door mij vanaf nul.
+
+		Als je problemen hebt met de mod of iets gerelateerd, neem dan contact met me op:
+		https://github.com/Bobster82/FS22_AutoRepair ]]>
+		</nl>
+
 	</description>
-    <version>2.0.0.4</version>
+	<version>2.0.0.5</version>
 	<multiplayer supported="true"/>
-	<iconFilename>store.dds</iconFilename>
+	<iconFilename>icon.dds</iconFilename>
 
 	<actions>
-    	<action name="AR_openMenu" axisType="HALF" />
+		<action name="AR_openMenu" axisType="HALF" />
   	</actions>
 
   	<inputBinding>
@@ -43,14 +135,10 @@
 		</actionBinding>
   	</inputBinding>
 
-  	<l10n>
-		<text name="input_AR_openMenu">
-			<en>AutoRepair: Open the settings menu</en>
-		</text>
-  	</l10n>
+  	<l10n filenamePrefix="Translations/translation"/>
 	
-    <extraSourceFiles>
-        <sourceFile filename="AutoRepair.lua"/>
-    </extraSourceFiles>	
+	<extraSourceFiles>
+		<sourceFile filename="AutoRepair.lua"/>
+	</extraSourceFiles>	
 
 </modDesc>

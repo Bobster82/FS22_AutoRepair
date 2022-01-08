@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<l10n>
+	<!--
+		Translation by: 
+		Bobster82 
+	-->
+	<texts>
+		<text name="input_AR_openMenu"					text="AutoRepair: Instellingen menu openen" />
+		<text name="AR_gui_yes"							text="Ja" />
+		<text name="AR_gui_no"							text="Nee" />
+
+		<text name="AR_gui_useGlobal_title"				text="Gebruik globaal of per boerderij" />
+		<text name="AR_gui_useGlobal_global"			text="Globaal" />
+		<text name="AR_gui_useGlobal_farm"				text="Per boerderij" />
+		<text name="AR_gui_useGlobal_tooltip"			text="Gebruik globale instellingen voor alle boerderijen of stel in per boerderij" />
+
+		<text name="AR_gui_timeToUpdate"				text="Update tijd in seconden" />
+		<text name="AR_gui_timeToUpdate_tooltip"		text="Wijzig het tijdsinterval wanneer voertuigen/gereedschap moeten worden gecontroleerd (1-60)." />
+
+		<text name="AR_gui_useByFarm_title"				text="Boerderij nummer" />
+		<text name="AR_gui_useByFarm_tooltip"			text="Selecteer het nummer van de boerderij." />
+
+		<text name="AR_gui_autorepair_title"			text="Automatisch repareren" />
+		<text name="AR_gui_autorepair_tooltip"			text="Automatische reparatie activeren/deactiveren." />
+		<text name="AR_gui_dmg_title"					text="Beschadigingsgrens (1-99)" />
+		<text name="AR_gui_dmg_tooltip"					text="Wijzig de beschadigingsgrens wanneer een voertuig/gereedschap wordt gerepareerd." />
+
+		<text name="AR_gui_autorepaint_title"			text="Automatisch overschilderen" />
+		<text name="AR_gui_autorepaint_tooltip"			text="Automatisch overschilderen activeren/deactiveren." />
+		<text name="AR_gui_wear_title"					text="Slijtagegrens (1-99)" />
+		<text name="AR_gui_wear_tooltip"				text="Wijzig de Slijtagegrens wanneer een voertuig/gereedschap wordt overgeschilderd." />
+
+		<text name="AR_gui_autoclean_title"				text="Automatisch wassen" />
+		<text name="AR_gui_autoclean_tooltip"			text="Automatische wassen activeren/deactiveren." />
+		<text name="AR_gui_dirt_title"					text="Vuilheidgrens (1-99)" />
+		<text name="AR_gui_dirt_tooltip"				text="Wijzig de vuilheidgrens wanneer een voertuig/gereedschap wordt gewassen." />
+		
+		
+		<text name="AR_warning_noAdmin"					text="Je moet inloggen als admin om het menu te gebruiken" />
+		
+	</texts>
+</l10n>

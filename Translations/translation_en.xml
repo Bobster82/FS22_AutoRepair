@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<l10n>
+	<!-- 
+		Translation by:
+		Bobster82
+	-->
+	<texts>
+		<text name="input_AR_openMenu"					text="AutoRepair: Open the settings menu" />
+		<text name="AR_gui_yes"							text="Yes" />
+		<text name="AR_gui_no"							text="No" />
+
+		<text name="AR_gui_useGlobal_title"				text="Use global or by farm settings" />
+		<text name="AR_gui_useGlobal_global"			text="Global" />
+		<text name="AR_gui_useGlobal_farm"				text="By farm" />
+		<text name="AR_gui_useGlobal_tooltip"			text="Use global settings for all farms or adjust by farm" />
+
+		<text name="AR_gui_timeToUpdate"				text="Time to update in seconds" />
+		<text name="AR_gui_timeToUpdate_tooltip"		text="Change the time interval when vehicles/tools needs to be checked (1-60)." />
+
+		<text name="AR_gui_useByFarm_title"				text="Farm number" />
+		<text name="AR_gui_useByFarm_tooltip"			text="Select farm number." />
+
+		<text name="AR_gui_autorepair_title"			text="Automatic repair" />
+		<text name="AR_gui_autorepair_tooltip"			text="Activate/deactivate automatic repair." />
+		<text name="AR_gui_dmg_title"					text="Damage threshold (1-99)" />
+		<text name="AR_gui_dmg_tooltip"					text="Change at what damage percent a vehicle/tool get repaired." />
+
+		<text name="AR_gui_autorepaint_title"			text="Automatic repaint" />
+		<text name="AR_gui_autorepaint_tooltip"			text="Activate/deactivate automatic repaint." />
+		<text name="AR_gui_wear_title"					text="Wear threshold (1-99)" />
+		<text name="AR_gui_wear_tooltip"				text="Change at what wear percent a vehicle/tool get repainted." />
+
+		<text name="AR_gui_autoclean_title"				text="Automatic clean" />
+		<text name="AR_gui_autoclean_tooltip"			text="Activate/deactivate automatic cleaning." />
+		<text name="AR_gui_dirt_title"					text="Dirt threshold (1-99)" />
+		<text name="AR_gui_dirt_tooltip"				text="Change at what dirt percent a vehicle/tool get cleaned." />
+		
+		
+		<text name="AR_warning_noAdmin"					text="You need to login as admin to use the menu" />
+		
+	</texts>
+</l10n>
