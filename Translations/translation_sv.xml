@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<l10n>
+	<!-- 
+		SV Translation by:
+		piplarsson
+	-->
+	<texts>
+		<text name="input_AR_openMenu"					text="AutoRepair: Öppna inställningsmenyn" />
+		<text name="AR_gui_yes"							text="Ja" />
+		<text name="AR_gui_no"							text="Nej" />
+
+		<text name="AR_gui_useGlobal_title"				text="Använd globala eller separata gårdsinställningar" />
+		<text name="AR_gui_useGlobal_global"			text="Globala" />
+		<text name="AR_gui_useGlobal_farm"				text="Separat gård" />
+		<text name="AR_gui_useGlobal_tooltip"			text="Använd globala inställningar för alla gårdar eller justera efter en viss gård." />
+
+		<text name="AR_gui_timeToUpdate"				text="Fordon/verktyg kommer att kontrolleras igen om" />
+		<text name="AR_gui_timeToUpdate_tooltip"		text="Ändra tidsintervallen när fordon/verktyg ska kontrolleras (1-60 Sec)." />
+
+		<text name="AR_gui_useByFarm_title"				text="Gårdsnummer" />
+		<text name="AR_gui_useByFarm_tooltip"			text="Välj gårdsnummer." />
+
+		<text name="AR_gui_autorepair_title"			text="Automatisk reparation" />
+		<text name="AR_gui_autorepair_tooltip"			text="Aktivera/avaktivera automatisk reparation." />
+		<text name="AR_gui_dmg_title"					text="Skadegräns (1–99%)" />
+		<text name="AR_gui_dmg_tooltip"					text="Ändra vid vilken skadeprocent ett fordon/verktyg ska repareras." />
+
+		<text name="AR_gui_autorepaint_title"			text="Automatisk ommålning" />
+		<text name="AR_gui_autorepaint_tooltip"			text="Aktivera/avaktivera automatisk ommålning." />
+		<text name="AR_gui_wear_title"					text="Slitagegräns (1-99%)" />
+		<text name="AR_gui_wear_tooltip"				text="Ändra vid vilken slitageprocent ett fordon/verktyg ska målas om." />
+
+		<text name="AR_gui_autoclean_title"				text="Automatisk rengöring" />
+		<text name="AR_gui_autoclean_tooltip"			text="Aktivera/avaktivera automatisk rengöring." />
+		<text name="AR_gui_dirt_title"					text="Smutsgräns (1-99%)" />
+		<text name="AR_gui_dirt_tooltip"				text="Ändra vid vilken smutsprocent ett fordon/verktyg ska rengöras." />
+		
+		
+		<text name="AR_warning_noAdmin"					text="Du måste logga in som admin för att använda denna menyn!" />
+		
+	</texts>
+</l10n>
