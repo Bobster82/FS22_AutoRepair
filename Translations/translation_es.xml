@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<l10n>
+	<!-- 
+		Translation by:
+		Vanquish081
+	-->
+	<texts>
+		<text name="input_AR_openMenu"					text="AutoRepair: Abrir menu de ajustes" />
+		<text name="AR_gui_yes"							text="Si" />
+		<text name="AR_gui_no"							text="No" />
+
+		<text name="AR_gui_useGlobal_title"				text="Usar ajustes globales o por granja" />
+		<text name="AR_gui_useGlobal_global"			text="Global" />
+		<text name="AR_gui_useGlobal_farm"				text="Por granja" />
+		<text name="AR_gui_useGlobal_tooltip"			text="Usar ajustes globales para todas las granjas o ajustar por granja." />
+
+		<text name="AR_gui_timeToUpdate"				text="Tiempo en actualizar, en segundos." />
+		<text name="AR_gui_timeToUpdate_tooltip"		text="Elegir el intervalo de tiempo cuando vehiculos/herramientas deben ser chequeados (1-60)." />
+
+		<text name="AR_gui_useByFarm_title"				text="Número Granja" />
+		<text name="AR_gui_useByFarm_tooltip"			text="Seleccionar Número Granja." />
+
+		<text name="AR_gui_autorepair_title"			text="Reparación Automática" />
+		<text name="AR_gui_autorepair_tooltip"			text="Activar/Desactivar Reparación Automatica." />
+		<text name="AR_gui_dmg_title"					text="Margen de Daño (1-99)" />
+		<text name="AR_gui_dmg_tooltip"					text="Elegir el porcentaje de daño al que deben reparar vehículos/herramientas." />
+
+		<text name="AR_gui_autorepaint_title"			text="Repitando Automático" />
+		<text name="AR_gui_autorepaint_tooltip"			text="Activar/Desactivar Repintado Automatico." />
+		<text name="AR_gui_wear_title"					text="Margen de Desgaste (1-99)" />
+		<text name="AR_gui_wear_tooltip"				text="Elegir el porcentaje de desgaste al que deben repintarse vehiculos/herramientas." />
+
+		<text name="AR_gui_autoclean_title"				text="Lavado Automática" />
+		<text name="AR_gui_autoclean_tooltip"			text="Activar/Desactivar Lavado Automatico." />
+		<text name="AR_gui_dirt_title"					text="Margen de Suciedad (1-99)" />
+		<text name="AR_gui_dirt_tooltip"				text="Elegir el porcentaje de suciedad al que deben lavarse vehiculos/herramientas." />
+		
+		
+		<text name="AR_warning_noAdmin"					text="Necesita iniciar sesión como administrador para usar el menú" />
+		
+	</texts>
+</l10n>
